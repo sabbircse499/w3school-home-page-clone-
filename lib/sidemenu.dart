@@ -69,6 +69,8 @@ class _SideState extends State<side> {
       'Quiz',
       'Compiler',
       'Certificate',
+      'update',
+
     ],
   };
 
