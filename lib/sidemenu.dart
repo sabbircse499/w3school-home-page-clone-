@@ -79,6 +79,7 @@ class _SideState extends State<side> {
     return Padding(
       padding: const EdgeInsets.only(top: 10),
       child: Drawer(
+
         child: Obx(() {
           return ListView(
             children: [
@@ -95,12 +96,17 @@ class _SideState extends State<side> {
               // Use ExpansionTile for categories with subcategories
               ...cTopics.keys.map((category) {
                 return ExpansionTile(
+
                   title: Text(
                     '${control.language.value}'+category,
                     style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                   children: cTopics[category]!.isEmpty
                       ? [
+
+                        Text('${cTopics[category]}')
+
+
                     // ListTile(
                     //   title: Text('No topics available'),
                     // ),

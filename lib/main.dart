@@ -62,26 +62,30 @@ side(),
         // AppBar will only show when the screen width is greater than 400
 
         // Body content
-        body: SafeArea(
-          child: Column(
-            children: [
-              Bar(),
-          
-              Expanded(
-                child: Row(
-                      children: [
-          
-                        if (Responsive.isDesktop(context))
-                        Expanded(flex: 1, child: side()),
-          
-                        Expanded(flex: 4, child: Content()),
-          
-                        if (Responsive.isDesktop(context))
-                        Expanded(flex :1,child: ad()),
-                      ],
-                    ),
-              ),
-            ],
+        body: SelectableRegion(
+          focusNode: FocusNode(),
+          selectionControls: MaterialTextSelectionControls(),
+          child: SafeArea(
+            child: Column(
+              children: [
+                Bar(),
+
+                Expanded(
+                  child: Row(
+                        children: [
+
+                          if (Responsive.isDesktop(context))
+                          Expanded(flex: 1, child: side()),
+
+                          Expanded(flex: 4, child: Content()),
+
+                          if (Responsive.isDesktop(context))
+                          Expanded(flex :1,child: ad()),
+                        ],
+                      ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

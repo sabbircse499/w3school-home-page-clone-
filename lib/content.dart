@@ -77,7 +77,9 @@ class _ContentState extends State<Content> {
           itemCount: title.length,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text(title[index]),
+              title: Text(
+
+                  title[index]),
               subtitle: Text(des[index]),
             );
 
